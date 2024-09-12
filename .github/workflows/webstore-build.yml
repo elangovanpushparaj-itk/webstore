@@ -1,4 +1,4 @@
-# Build webapp and publish artifact
+# Build webapp and publish artifact changes
 
 name: webstore-build
 
