@@ -6,7 +6,7 @@ RUN dotnet restore
 RUN dotnet publish -c Release -o out
 
 # We use this stage to serve the app
-FROM mcr.microsoft.com/dotnet/aspnet:6.0
+FROM mcr.microsoft.com/dotnet/aspnet:8.0
 WORKDIR /ausemartweb
 COPY --from=build-stage /ausemartweb/out .
 ENTRYPOINT ["dotnet", "ausemartweb.dll"]
